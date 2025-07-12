@@ -1,0 +1,57 @@
+
+{
+  "manifest_version": 3,
+  "name": "Invoice Downloader for Amazon Business",
+  "version": "0.1.0",
+  "description": "Automates downloading and organizing of Amazon Business invoices.",
+  "permissions": [
+    "activeTab",
+    "downloads",
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "src/background/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*/order-history*",
+        "https://www.amazon.co.uk/*/order-history*",
+        "https://www.amazon.fr/*/order-history*",
+        "https://www.amazon.de/*/order-history*",
+        "https://www.amazon.it/*/order-history*",
+        "https://www.amazon.es/*/order-history*",
+        "https://www.amazon.ca/*/order-history*",
+        "https://www.amazon.com.au/*/order-history*",
+        "https://www.amazon.in/*/order-history*",
+        "https://www.amazon.co.jp/*/order-history*",
+        "https://www.amazon.com/*/order-details*",
+        "https://www.amazon.co.uk/*/order-details*",
+        "https://www.amazon.fr/*/order-details*",
+        "https://www.amazon.de/*/order-details*",
+        "https://www.amazon.it/*/order-details*",
+        "https://www.amazon.es/*/order-details*",
+        "https://www.amazon.ca/*/order-details*",
+        "https://www.amazon.com.au/*/order-details*",
+        "https://www.amazon.in/*/order-details*",
+        "https://www.amazon.co.jp/*/order-details*"
+      ],
+      "js": ["src/content/content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "src/assets/icon16.png",
+      "48": "src/assets/icon48.png",
+      "128": "src/assets/icon128.png"
+    }
+  },
+  "options_page": "src/settings/settings.html",
+  "icons": {
+    "16": "src/assets/icon16.png",
+    "48": "src/assets/icon48.png",
+    "128": "src/assets/icon128.png"
+  }
+}

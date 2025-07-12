@@ -1,0 +1,28 @@
+{
+  "name": "amazoninvoice",
+  "version": "1.0.0",
+  "description": "This Chrome extension automates the process of downloading and organizing your Amazon Business invoices.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.1.1",
+    "tailwindcss": "^4.1.11",
+    "webpack": "^5.100.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
